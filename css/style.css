@@ -1,0 +1,16 @@
+body{
+    background: bisque;
+}
+.container{
+    width: auto;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-areas: 'header header header header';
+}
+
+.container.header{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'titulo titulo imgtitu imgtitu';
+}
+
