@@ -18,44 +18,99 @@
     <section class="modal">
         <div class="modal-container">
             <h3 class="modal-title">Tus Cursos</h3>
+            <table id="miscursos" class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+           
+            <button class="btn">Vaciar Carrito</button>
+            <br>
             <button class="modal-close">cerrar</button>
         </div>
     </section>
-    <section class="buscar">
-        <div class="buscarh">
-        <input class="input1" type="text" placeholder="Buscar...">
-        </div>
+    <section class="suscribete">
+        <h3>Que Deseas Buscar</h3>
+        <P>Lorem Ipsum es el término para referirnos a un texto falso que simula caracteres latinos y que utilizamos para ver de un modo rápido cómo quedaría una página con el contenido; antes de tener el texto definitivo, para componer fácilmente la maqueta.</P>
+
+        <form action="" >
+            <input type="text" placeholder="Ingresa Lo Que Quieres Buscar">
+            <input type="submit" value="Buscar">
+            </form>
     </section>
     <main class="cards">
-        <div class="cardsh"> <img src="./img/curso1.jpg" alt="" width="300px">
+        <div class="cardsh"> <img src="./img/curso1.jpg" alt="" width="300px" >
             <h2>Curso de Node.Js</h2>
             <p>Precio: 100K</p>
-            <button class="btn">Añadir</button>
+            <input  id="curso1"  type="button" class="btn" value="Añadir" >
         </div>
-        <div class="cardsh"><img src="./img/curso2.jpg" alt="" width="300px">
+        <div class="cardsh" ><img src="./img/curso2.jpg" alt="" width="300px">
             <h2>Curso de Java</h2>
             <p>Precio: 150K</p>
-            <button class="btn">Añadir</button></div>
-        <div class="cardsh"><img src="./img/curso3.jpg" alt="" width="300px">
+            <input id="curso2"  type="button" class="btn" value="Añadir" ></div>
+        <div class="cardsh" ><img src="./img/curso3.jpg" alt="" width="300px">
             <h2>Curso de React</h2>
             <p>Precio: 80K</p>
-            <button class="btn">Añadir</button></div>
-        <div class="cardsh"><img src="./img/curso4.jpg" alt="" width="300px">
+            <input  id="curso3" type="button" class="btn" value="Añadir" ></div>
+        <div class="cardsh" ><img src="./img/curso4.jpg" alt="" width="300px">
             <h2>Curso de Phyton</h2>
             <p>Precio: 200K</p>
-            <button class="btn">Añadir</button></div>
-        <div class="cardsh"><img src="./img/curso5.jpg" alt="" width="300px">
+            <input id="curso4" type="button" class="btn" value="Añadir" ></div>
+        <div class="cardsh" ><img src="./img/curso5.jpg" alt="" width="300px">
             <h2>Curso de Introduccion a la Programacion</h2>
             <p>Precio: 100K</p>
-            <button class="btn">Añadir</button></div>
-        <div class="cardsh"><img src="./img/curso6.jpg" alt="" width="300px">
+            <input id="curso5"  type="button" class="btn" value="Añadir" ></div>
+        <div class="cardsh" ><img src="./img/curso6.jpg" alt="" width="300px">
             <h2>Curso de Hacking Etico</h2>
             <p>Precio: 500K</p>
-            <button class="btn">Añadir</button></div>
+            <input id="curso6" type="button" class="btn" value="Añadir" ></div>
     </main>
-    <footer class="pie">
-        Copyright & copy Alvaro Lopez
-    </footer>
+  
+<div class="footer">
+    <div class="caja-contenedor">
+        <div class="caja">
+            <h3>noticias e informacion</h3>
+            <p>Lorem Ipsum es el término para referirnos a un texto falso que simula caracteres latinos y que utilizamos para ver de un modo rápido cómo quedaría una página con el contenido; antes de tener el texto definitivo, para componer fácilmente la maqueta.</p>
+        </div>
+
+        <div class="caja">
+            <h3>Buscanos En</h3>
+            <a href="#">facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinteres</a>
+            <a href="#">Twitter</a>
+        </div>
+
+        <div class="caja">
+            <h3>Mas Informacion</h3>
+            <div class="info">
+                <i class="fa-solid fa-phone"></i>
+                <p>123-456-789 <br>789-444-521</p>
+            </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>miscursos@gmail.com <br>miscursos@gmail.com</p>
+                </div>
+
+                    <div class="info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Popayan, Colombia <br>1111122233</p>
+                    </div>
+        </div>
+    </div>
+
+<h1 class="creditos">
+    &copy, copyright @ 2023 Alvaro Lopez SENA
+</h1>
+</div>
 </div>
     
     <script src="./js/main.js"></script>
