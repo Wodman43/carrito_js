@@ -3,14 +3,45 @@ body{
 }
 .container{
     width: auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
     display: grid;
-    grid-template-areas: 'header header header header';
+    grid-template-columns: 4fr;
+    
 }
 
-.container.header{
-    width: 100%;
+
+.ver{
     display: grid;
-    grid-template-areas: 'titulo titulo imgtitu imgtitu';
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 10px;
+}
+.imagenp{
+    width: 60px;
+    
+}
+.imghead{
+    display: flex;
+    justify-content: center;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.buscar{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 300px;
+}
+
+.buscarh{
+    
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
