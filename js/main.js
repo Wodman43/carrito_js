@@ -32,7 +32,7 @@ cursooos.forEach(boton => {
 function agregarcurso(e) { // limpiar();
 
     const productos = e.target.parentElement;
-
+    const img = productos.querySelector('img').src;
     const nombre = productos.querySelector('h2').innerHTML;
     const precio = productos.querySelector('p').innerHTML;
     console.log(nombre);
@@ -40,16 +40,19 @@ function agregarcurso(e) { // limpiar();
             const borrar = document.createElement('a');
             borrar.classList = 'borrar-curso';
             borrar.innerText = 'eliminar';
-            let tabla = document.createElement('table');
-            let tr = document.createElement('tr');
+            let tabla = document.createElement('div');
+            tabla.classList ='añadir'
+            // let divh = document.createElement('tr');
             let nom = document.createElement('h3');
-            nom.innerHTML = `<tr><h3>${nombre}</h3><tr>`;
+            nom.innerHTML = `<h3>${nombre}</h3>`;
             let pre = document.createElement('p');
-            pre.innerHTML = `<tr><p>${precio}</p></tr>`;
+            pre.innerHTML = `<p>${precio}</p>`;
+            
+            // cursos.appendChild(divh);
+            tabla.appendChild(nom);
+            tabla.appendChild(pre);
             cursos.appendChild(tabla);
-            cursos.appendChild(tr);
-            cursos.appendChild(nom);
-            cursos.appendChild(pre);
+            
              borrar.onclick = () =>{
                 borrarcurso(cursooos);
                 cursos.remove();
