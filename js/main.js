@@ -60,15 +60,15 @@ function agregarcurso(e) { // limpiar();
                 
             }
 
-            let i = 0;
+            // let i = 0;
 
-            while(i < 1){
+            // while(i < 1){
             tabla.appendChild(nom);
             tabla.appendChild(pre);
             tabla.appendChild(img1);
             tabla.appendChild(borrar);
             cursos.appendChild(tabla);
-        i++;}
+        // i++;}
             
             
 
