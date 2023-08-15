@@ -60,6 +60,7 @@ function agregarcurso(e) { // limpiar();
             }
             cursos.appendChild(borrar);
     
+            
            
         
     
