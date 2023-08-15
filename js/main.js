@@ -43,22 +43,43 @@ function agregarcurso(e) { // limpiar();
             let tabla = document.createElement('div');
             tabla.classList ='añadir'
             // let divh = document.createElement('tr');
+            let img1 = document.createElement('img');
+            img1.src = img;
+            img1.style.width = '80px';
+            img1.style.height = '60px';
             let nom = document.createElement('h3');
             nom.innerHTML = `<h3>${nombre}</h3>`;
             let pre = document.createElement('p');
             pre.innerHTML = `<p>${precio}</p>`;
             
             // cursos.appendChild(divh);
-            tabla.appendChild(nom);
-            tabla.appendChild(pre);
-            cursos.appendChild(tabla);
-            
-             borrar.onclick = () =>{
+
+            borrar.onclick = () =>{
                 borrarcurso(cursooos);
                 cursos.remove();
                 
             }
-            cursos.appendChild(borrar);
+
+            let i = 0;
+
+            while(i < 1){
+            tabla.appendChild(nom);
+            tabla.appendChild(pre);
+            tabla.appendChild(img1);
+            tabla.appendChild(borrar);
+            cursos.appendChild(tabla);
+        i++;}
+            
+            
+
+            // tabla.appendChild(nom);
+            // tabla.appendChild(pre);
+            // tabla.appendChild(img1);
+            // tabla.appendChild(borrar);
+            // cursos.appendChild(tabla);
+            
+           
+            // cursos.appendChild(borrar);
     
             
            
