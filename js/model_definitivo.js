@@ -20,7 +20,7 @@ function evenlistners() {
     document.addEventListener('DOMContentLoaded', () => {
         miscursos = JSON.parse(localStorage.getItem('miscursos')) || [];
         console.log(miscursos);
-        actualizarCarrito();
+        crearcurso();
     });
 
     cursooos.forEach((boton) => {
@@ -39,25 +39,29 @@ function agregarcurso(e) {
         img: img,
         nombre: nombre,
         precio: precio,
-        cantidad: 1,
+        cant: 1,
     };
 
     const cursoExistente = miscursos.find(curso => curso.nombre === cursitosobj.nombre);
 
     if (cursoExistente) {
-        cursoExistente.cantidad++;
+        cursoExistente.cant++;
     } else {
         miscursos.push(cursitosobj);
     }
 
-    agregarstorage();
-    actualizarCarrito();
+   
+    crearcurso();
 }
 
-function actualizarCarrito() {
+function crearcurso() { //limpiarhtml(); 
+
     cursos.innerHTML = '';
 
     miscursos.forEach(curso => {
+        const borrar = document.createElement('a');
+        borrar.classList = 'borrar-curso';
+        borrar.innerText = 'eliminar';
         const tabla = document.createElement('div');
         tabla.classList = 'añadir';
 
@@ -76,29 +80,61 @@ function actualizarCarrito() {
         pre.classList = 'hijos-añadir';
 
         const cant = document.createElement('p');
-        cant.innerHTML = `<p>Cantidad: ${curso.cantidad}</p>`;
+        cant.innerHTML = `<p>Cantidad: ${curso.cant}</p>`;
         cant.classList = 'hijos-añadir';
 
         tabla.appendChild(nom);
         tabla.appendChild(pre);
         tabla.appendChild(img1);
         tabla.appendChild(cant);
+        tabla.appendChild(borrar);
+        borrar.onclick = () =>{
+            borrarcurso(curso.id);
+            // localStorage.clear();
+            
+        }
 
         cursos.appendChild(tabla);
-    });
+       
 
-    const subtotal = document.createElement('p');
-    const total = miscursos.reduce((accumulator, curso) => accumulator + curso.precio * curso.cantidad, 0);
+        let vaciar = document.getElementById('vaciar');
+            vaciar.addEventListener('click', () =>{
+                vaciarC(curso.id);
+            }
+            );
+    });
+    
+
+    const subtotal = document.createElement('h3');
+    subtotal.classList = 'añadir'
+    const total = miscursos.reduce((accumulator, curso) => accumulator + curso.precio * curso.cant, 0);
     subtotal.textContent = `Subtotal: ${total}`;
+    
     cursos.appendChild(subtotal);
+    
+    agregarstorage();
 }
+function borrarcurso(id) {
+    console.log('Borrado',id);
+    miscursos = miscursos.filter(curso => curso.id !== id);
+    crearcurso();
+}
+
+function vaciarC(id){
+    miscursos = miscursos.splice(id);
+    crearcurso();
+
+}
+
 
 function agregarstorage() {
     localStorage.setItem('miscursos', JSON.stringify(miscursos));
 }
 
-function borrarcurso(id) {
-    console.log('Borrado');
-    miscursos = miscursos.filter(curso => curso.id !== id);
-    actualizarCarrito();
-}
+// function limpiarhtml(){
+//     while (cursos.firstChild){
+//         cursos.removeChild(cursos.firstChild);
+//     }
+// }
+ 
+
