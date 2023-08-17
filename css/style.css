@@ -117,6 +117,18 @@ body{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     transition: all .3s linear;
 }
+.btn-v{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 25px;
+    background: var(--degradado);
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
 
 
 .ver{
@@ -333,10 +345,16 @@ body{
 
     .añadir{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         display: flex;
         justify-content: center;
         align-items: center;
         grid-gap: 12px;
         padding-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .hijos-añadir{
+        align-items: center;
+        max-width: 170px;
     }
