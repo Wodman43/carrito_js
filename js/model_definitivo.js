@@ -11,6 +11,7 @@ closemodal.addEventListener('click', () => {
 
 const cursooos = document.querySelectorAll('.btn');
 const cursos = document.getElementById('miscursos');
+const botones = document.querySelectorAll('btn-2');
 
 let miscursos = [];
 
@@ -26,6 +27,8 @@ function evenlistners() {
     cursooos.forEach((boton) => {
         boton.addEventListener('click', agregarcurso);
     });
+
+   
 }
 
 function agregarcurso(e) {
@@ -43,7 +46,6 @@ function agregarcurso(e) {
     };
 
     const cursoExistente = miscursos.find(curso => curso.nombre === cursitosobj.nombre);
-
     if (cursoExistente) {
         cursoExistente.cant++;
     } else {
@@ -59,9 +61,11 @@ function crearcurso() { //limpiarhtml();
     cursos.innerHTML = '';
 
     miscursos.forEach(curso => {
-        const borrar = document.createElement('a');
-        borrar.classList = 'borrar-curso';
-        borrar.innerText = 'eliminar';
+        const borrar = document.createElement('img');
+        borrar.classList = 'hijos-añadir';
+        borrar.style.width = '30px';
+        borrar.style.height = '30px';
+        borrar.src = 'https://cdn-icons-png.flaticon.com/128/5974/5974771.png';
         const tabla = document.createElement('div');
         tabla.classList = 'añadir';
 
